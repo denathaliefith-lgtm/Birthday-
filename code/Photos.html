@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Memories</title>
+    </head>
+    <style>
+        body{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            text-align: center;
+        }
+        .main-nav {
+        background: #f5e192;
+        padding: 10px 40px;
+        text-align: center;
+        }
+        .main-nav ul {
+        font-family: 'Pacifico', cursive ;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+        justify-content: flex-end; 
+        }
+        .main-nav li {
+        position: relative; 
+        }
+        .main-nav a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 12px;
+        display: block;
+        font-weight: 500;
+        }
+        .main-nav a:hover {
+        text-decoration: underline;
+        }
+        .main-nav li ul {
+        font-family: 'Comic Neue', cursive;
+        text-align: left;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        font-size: 18px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+        padding: 10px 0;
+        min-width: 180px;
+        border-radius: 6px;
+        z-index: 1000;
+        }
+        .main-nav li ul li {
+        display: block;
+        }
+        .main-nav li ul li a {
+        color: #333;
+        padding: 10px 20px;
+        }
+        .main-nav li ul li a:hover {
+        background: #f8f8f8;
+        color: #d46a6a;
+        }
+        .main-nav li:hover > ul {
+        display: block;
+        }
+        .banner{
+           height: 200px;
+           background: url(Banner.jpg);
+           background-size: cover;
+           background-repeat:no-repeat;
+           background-attachment: fixed;
+        }
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery img{
+            width: 100%;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .popup{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: rgb(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup:target{
+            display: flex;
+        }
+        .popup-content{
+            display: flex;
+            gap: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            align-items: center;
+        }
+        .popup-content img{
+            width: 250px;
+            border-radius: 10px;
+        }
+        .info{
+            text-align: left;
+        }
+        .close{
+            display: block;
+            margin-top: 10px;
+            color: brown;
+            font-weight: bold;
+        }
+
+    </style>
+    <body>
+        <!--Top-bar-->
+<nav class="main-nav">
+  <ul>
+    <li><a href=""></a></li>
+    <li class="dropdown">
+      <a href="#"></a>
+      <ul>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+      </ul>
+    </li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+  </ul>
+</nav>
+
+<!--Banner-->
+  <div class="banner"></div>
+  <h1 style="text-align: center;">Click the Photos</h1>
+        <!--Photos-->
+        <div class="gallery">
+        <a href="#img1"><img src="hugs.jpg"></a>
+        <a href="#img2"><img src="night.jpg"></a>
+        <a href="#img3"><img src="stars.jpg"></a>
+        <a href="#img4"><img src="sleep.jpg"></a>
+
+        <a href="#img5"><img src="magic.jpg"></a>
+        <a href="#img6"><img src="Three.jpg"></a>
+        <a href="#img7"><img src="trio.jpg"></a>
+        <a href="#img8"><img src="concert.jpg"></a>
+        </div>
+
+        <!--Popup-->
+            <div id="img1" class="popup">
+            <div class="popup-content">
+            <img src="hugs.jpg">
+            <div class="info">
+            <h2>Mahal kita</h2>
+            <p>I remember that I said "Mahal Kita," and you asked me what that means, and I said it is love, but there are two meanings in them; it also means it's expensive because, in a way, love is expensive because you can't really buy it with money, as it means more than just buying it because love is built over time and you know how special you are coming into my life.</p>
+            <a href="#" class="close">Close</a>
+        </div>
+    </div>
+</div>
+<div id="img2" class="popup">
+            <div class="popup-content">
+            <img src="night.jpg">
+            <div class="info">
+            <h2>Take care of yourself</h2>
+            <p>No matter how late it is, either mine or yours, I just recall every time when we didn't leave and we stayed at home playing music, probably annoying the other players. I still laugh or smile when I remember it, but still, I do hope you've been resting well and you've been taking care of yourself. Remember that your health is important, so don't forget to take care of yourself.</p>
+            <a href="#" class="close">Close</a>
+        </div>
+    </div>
+</div>
+<div id="img3" class="popup">
+            <div class="popup-content">
+            <img src="stars.jpg">
+            <div class="info">
+            <h2>Starlight</h2>
+            <p>I call you starlight because you shine brightly like a star and always shine in the night sky and are beautiful and radiant even if it gets darker. The star shines more brightly, and that's you shining in the galaxy, and you always will shine no matter where you are. You still do, and that's why I know you'll do amazing.</p>
+            <a href="#" class="close">Close</a>
+        </div>
+    </div>
+</div>
+<div id="img4" class="popup">
+            <div class="popup-content">
+            <img src="sleep.jpg">
+            <div class="info">
+            <h2>Sleep</h2>
+            <p>We often sleep a lot in-game, but it is nice to stay in just one spot and listen to the music playing it is relaxing, and then we fall asleep tired, but that's the fun thing about it: we're able to go somewhere to remind ourselves that it's important to give space to process everything at that moment.</p>
+            <a href="#" class="close">Close</a>
+        </div>
+    </div>
+</div>
+ <div id="img5" class="popup">
+            <div class="popup-content">
+            <img src="magic 1.jpg">
+            <div class="info">
+            <h2>One of my favorite Photo</h2>
+            <p>I think this is one of my favorite photos, well, because it just feels magical, like a shooting star coming down towards you, and the stars both reach one another, and it's fun taking photos of this, and I still Do have my favorite with mine and the one you took too.</p>
+            <a href="#" class="close">Close</a>
+        </div>
+    </div>
+</div>
+<div id="img6" class="popup">
+            <div class="popup-content">
+            <img src="Three.jpg">
+            <div class="info">
+            <h2>Trio</h2>
+            <p>I think it took this when you were just getting to know Phoenix, and it is a pretty nice photo, and I miss Phoenix, and I just hope she's doing well, and I wish you both had been taking care of yourselves and getting rest. Even if I repeat it over and over again, I just want to make sure you do.</p>
+            <a href="#" class="close">Close</a>
+        </div>
+    </div>
+</div>
+<div id="img7" class="popup">
+            <div class="popup-content">
+            <img src="trio.jpg">
+            <div class="info">
+            <h2>Sillines</h2>
+            <p>I love all the silliness we did together; it's always fun goofing around. It's always important to have and break away from overdoing things and remind you that we're there, each one of us. We care for each other; we're there to support one another within each of our journeys, in the sad moments and happy times. Just don't forget that we are here for you.</p>
+            <a href="#" class="close">Close</a>
+        </div>
+    </div>
+</div>
+</div>
+<div id="img8" class="popup">
+            <div class="popup-content">
+            <img src="concert.jpg">
+            <div class="info">
+            <h2>Music</h2>
+            <p>You have a passion for creation. creating beautiful things, and when you show me all your work and I close my eyes, I imagine a different world that you create through music, and I come to understand and appreciate more in music and how you could create a place to see this melody guiding through the music and see the world build with your creation.</p>
+            <a href="#" class="close">Close</a>
+        </div>
+    </div>
+</div>
+    </body>
+</html>
+
+
